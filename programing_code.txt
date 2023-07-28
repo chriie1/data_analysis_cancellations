@@ -1,0 +1,53 @@
+import pandas as pd
+import numpy as np
+import plotly.express as px
+
+# Data importing and visualization
+df_cancellations = pd.read_csv('cancellations.csv')
+df_cancellations
+
+# Data cleaning
+# Delleting CostumerID. This column has no relevance for the analysis
+df_cancellations = df_cancellations.drop('CustomerID', axis=1)
+df_cancellations.head(5)
+	
+# Delleting lines with empty cells
+df_cancellations = df_cancellations.dropna()
+
+# Confirming the changes
+df_cancellations.info()
+
+# Testing some relationships between the data to better understand the cancellations 
+# Understanding cancellation ratio
+display(df_cancellations['cancelou'].value_counts(normalize=True).map('{:.1%}'.format))
+fig1 = px.pie(df_cancellations, names='cancelou', title='cancellations')
+fig1.show()
+
+# Contract duration
+display(df_cancellations['duracao_contrato'].value_counts(normalize=True).map('{:.1%}'.format))
+fig2 = px.pie(df_cancellations, names='duracao_contrato', title='Contract duration')
+fig2.show()
+
+# Users gender distribution 
+display(df_cancellations['sexo'].value_counts(normalize=True).map('{:.1%}'.format))
+fig3 = px.pie(df_cancellations, names='sexo', title='Users gender distribution')
+fig3.show()
+
+# Distribution of subscription plans
+display(df_cancellations['assinatura'].value_counts(normalize=True).map('{:.1%}'.format))
+fig4 = px.pie(df_cancellations, names='assinatura', title='distribution of subscription plans')
+fig4.show()
+
+# Conclusion graphs
+for coluna in df_cancellations.columns:
+    grafico = px.histogram(df_cancellations, x=coluna, color="cancelou")
+    grafico.show()
+
+# Cancellations without the offenders we found
+df = df_cancellations[df_cancellations['duracao_contrato']!='Monthly']
+df = df_cancellations[df_cancellations['ligacoes_callcenter']<5]
+
+display(df['cancelou'].value_counts(normalize=True).map('{:.1%}'.format))
+
+fig5 = px.pie(df, names='cancelou', title='cancellations')
+fig5.show()
