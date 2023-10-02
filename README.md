@@ -9,6 +9,36 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/139576856/256914672-6615c09f-3810-4e11-8162-11ea6985336f.png" width="900px" />
 </div>
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 <h2 align="center">Verifying some columns distributions</h2>
 # This program adds two numbers
