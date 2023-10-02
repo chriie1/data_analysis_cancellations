@@ -11,6 +11,16 @@
 </div>
 
 <h2 align="center">Verifying some columns distributions</h2>
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/139576856/256919953-287694c2-b639-454a-839d-2e08b0c2afbb.png" width="450px" />
