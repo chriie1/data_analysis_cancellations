@@ -51,6 +51,16 @@ print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
   <img src="https://user-images.githubusercontent.com/139576856/256922841-c4d700d0-d38e-4ca6-a5d8-2ec6bcbacb35.png" width="800px" />  
   <p>Contract Duration</p>
 </div>
+# This program adds two numbers
+
+num1 = 1.5
+num2 = 6.3
+
+# Add two numbers
+sum = num1 + num2
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
 <div align="center"> 
   <br>
